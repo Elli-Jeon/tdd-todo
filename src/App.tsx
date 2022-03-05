@@ -1,12 +1,10 @@
 import React from 'react';
+import { useAppSelector } from 'hooks/redux';
 import List from './components/List';
 import { ITask } from './types';
 
 function App() {
-  const tasks: ITask[] = [
-    { id: 1, todo: 'TDD 공부하기' },
-    { id: 2, todo: 'voice 구현하기' },
-  ];
+  const tasks = useAppSelector((state) => state.tasks);
 
   return (
     <div className="App">
