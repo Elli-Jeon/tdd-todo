@@ -1,10 +1,16 @@
 import React from 'react';
+import { ITask } from 'types';
 
-const List = () => {
+interface IProps {
+  tasks: ITask[];
+}
+
+const List = ({ tasks }: IProps) => {
   return (
     <div>
-      <div>TDD 공부하기</div>
-      <div>voice 구현하기</div>
+      {tasks.map((todo) => (
+        <div key={todo.id}>{todo.todo}</div>
+      ))}
     </div>
   );
 };
