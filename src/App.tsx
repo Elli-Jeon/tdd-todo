@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAppSelector } from 'hooks/redux';
 import List from './components/List';
-import { ITask } from './types';
 
 function App() {
   const tasks = useAppSelector((state) => state.tasks);
