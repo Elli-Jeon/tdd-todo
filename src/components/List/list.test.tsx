@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'utils/test-utils';
 import List from './';
 import { ITask } from 'types';
 
 describe('list', () => {
-  it('list 2개', () => {
+  test('list 2개', () => {
     const tasks: ITask[] = [
       { id: 1, todo: 'TDD 공부하기' },
       { id: 2, todo: 'voice 구현하기' },
