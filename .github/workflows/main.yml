@@ -14,7 +14,7 @@ jobs:
   # This workflow contains a single job called "build"
   createPR:
     # Only happens when the latest commit of MVP is '[Build] test'
-    if: ${{github.event.commits[0].message}} == '[test] test'
+    if: github.event.commits[0].message == '[test] test'
     
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
